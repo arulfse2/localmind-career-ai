@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "localmind-career-ai-backend"
+version = "0.1.0"
+description = "FastAPI backend for LocalMind Career AI"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "httpx",
+    "pymupdf",
+    "python-docx",
+    "python-multipart",
+    "pydantic",
+    "python-dotenv",
+    "qdrant-client",
+]
+
+[tool.setuptools.packages.find]
+include = ["app*"]

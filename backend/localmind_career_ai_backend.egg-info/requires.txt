@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+httpx
+pymupdf
+python-docx
+python-multipart
+pydantic
+python-dotenv
+qdrant-client

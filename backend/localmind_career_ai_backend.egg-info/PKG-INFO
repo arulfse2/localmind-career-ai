@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: localmind-career-ai-backend
+Version: 0.1.0
+Summary: FastAPI backend for LocalMind Career AI
+Requires-Python: >=3.11
+Requires-Dist: fastapi
+Requires-Dist: uvicorn[standard]
+Requires-Dist: httpx
+Requires-Dist: pymupdf
+Requires-Dist: python-docx
+Requires-Dist: python-multipart
+Requires-Dist: pydantic
+Requires-Dist: python-dotenv
+Requires-Dist: qdrant-client

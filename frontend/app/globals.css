@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f6fb;
+  --foreground: #172033;
+  --card: #ffffff;
+  --card-foreground: #172033;
+  --primary: #6558d3;
+  --primary-foreground: #ffffff;
+  --secondary: #eeeffa;
+  --secondary-foreground: #37334f;
+  --muted: #f3f4f8;
+  --muted-foreground: #778096;
+  --accent: #f0effb;
+  --accent-foreground: #20283a;
+  --destructive: #d14343;
+  --border: #e8eaf1;
+  --input: #dfe2eb;
+  --ring: #8579e8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 85% 4%, rgb(218 213 255 / 28%), transparent 25rem),
+    radial-gradient(ellipse at 8% 30%, rgb(207 231 255 / 24%), transparent 30rem),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+* {
+  border-color: var(--border);
+}
+
+::selection {
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.surface-card {
+  border-color: rgb(226 228 238 / 80%);
+  box-shadow:
+    0 1px 2px rgb(22 28 45 / 3%),
+    0 12px 32px rgb(22 28 45 / 3%);
+}
+
+.soft-grid {
+  background-image: radial-gradient(rgb(101 88 211 / 11%) 0.7px, transparent 0.7px);
+  background-size: 15px 15px;
+}
+
+.dropzone-glow {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgb(101 88 211 / 7%), transparent 60%),
+    #fafaff;
+}
+
+.score-track {
+  background: conic-gradient(var(--primary) var(--score), #eeeff5 0);
+}
+
+.page-enter {
+  animation: page-enter 360ms ease-out both;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.markdown-answer h1,
+.markdown-answer h2,
+.markdown-answer h3 {
+  margin: 1.25rem 0 0.5rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.markdown-answer h1 {
+  font-size: 1.2rem;
+}
+
+.markdown-answer h2 {
+  font-size: 1.05rem;
+}
+
+.markdown-answer p {
+  margin: 0.65rem 0;
+}
+
+.markdown-answer ul,
+.markdown-answer ol {
+  margin: 0.5rem 0;
+  padding-left: 1.4rem;
+}
+
+.markdown-answer ul {
+  list-style: disc;
+}
+
+.markdown-answer ol {
+  list-style: decimal;
+}
+
+.markdown-answer a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.markdown-answer code {
+  border-radius: 0.25rem;
+  background: var(--muted);
+  padding: 0.1rem 0.3rem;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.9em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
